@@ -1,0 +1,53 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+				"${workspaceFolder}/components/arch/ck802",
+				"${workspaceFolder}/components/arch/cm0",
+                "${workspaceFolder}/components/ble/controller",
+                "${workspaceFolder}/components/ble/hci",
+                "${workspaceFolder}/components/ble/host",
+                "${workspaceFolder}/components/ble/include",
+                "${workspaceFolder}/components/driver/include",
+                "${workspaceFolder}/components/driver/source",
+				"${workspaceFolder}/components/driver_rom/include",
+				"${workspaceFolder}/components/driver_rom/source",
+				"${workspaceFolder}/components/inc",
+				"${workspaceFolder}/components/libraries",
+				"${workspaceFolder}/components/osal/include",
+				"${workspaceFolder}/components/profiles/ancs",
+				"${workspaceFolder}/components/profiles/Batt",
+				"${workspaceFolder}/components/profiles/DevInfo",
+				"${workspaceFolder}/components/profiles/GATT",
+				"${workspaceFolder}/components/profiles/HID",
+				"${workspaceFolder}/components/profiles/HIDVoice",
+				"${workspaceFolder}/components/profiles/hrs",
+				"${workspaceFolder}/components/profiles/Keys",
+				"${workspaceFolder}/components/profiles/ota",
+				"${workspaceFolder}/components/profiles/ota_app",
+				"${workspaceFolder}/components/profiles/Roles",
+				"${workspaceFolder}/components/profiles/ScanParam",
+				"${workspaceFolder}/components/profiles/SimpleProfile",
+
+				"${workspaceFolder}/example/ble_peripheral/simple_ble_peripheral/source",
+				"${workspaceFolder}/example/ble_peripheral/simple_ble_peripheral/source/profiles",
+				"${workspaceFolder}/example/ble_peripheral/simple_ble_peripheral/source/User",
+
+
+				"${workspaceFolder}/lib",
+				"${workspaceFolder}/misc"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "compilerPath": "C:\\MinGW\\bin\\gcc.exe",
+            "cStandard": "c11",
+            "cppStandard": "gnu++14",
+            "intelliSenseMode": "windows-gcc-x86"
+        }
+    ],
+    "version": 4
+}

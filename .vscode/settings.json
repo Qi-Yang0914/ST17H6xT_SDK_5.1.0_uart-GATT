@@ -1,0 +1,7 @@
+{
+	"files.associations": {
+		"lc_uart.h": "c",
+		"lc_common.h": "c",
+		"simplegattprofile.h": "c"
+	}
+}
