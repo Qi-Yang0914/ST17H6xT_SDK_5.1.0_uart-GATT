@@ -106,12 +106,18 @@ typedef	struct
 	uint8		app_notify_len;
 }lc_app_set_t;
 
-
+typedef struct
+{
+	uint8	dev_poweron_switch_flag;		//	power on switch exist or not		:1	no switch,	0	
+	uint8	dev_power_flag;					//	device working flag					:1	working,	0	power off
+	uint8	dev_ble_con_state;				//	BLE	connection state				:1	connected,	0	disconnected
+}lc_dev_sys_param;
 
 /*------------------------------------------------------------------*/
 /* 					 external variables							 	*/
 /*------------------------------------------------------------------*/
 extern	lc_app_set_t		LC_App_Set_Param;
+extern	lc_dev_sys_param	LC_Dev_System_Param;
 /*------------------------------------------------------------------*/
 /* 					 User function prototypes					 	*/
 /*------------------------------------------------------------------*/

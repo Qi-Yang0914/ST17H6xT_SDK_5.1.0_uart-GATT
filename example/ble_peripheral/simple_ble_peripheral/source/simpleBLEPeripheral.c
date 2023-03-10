@@ -30,6 +30,7 @@
 #include "simpleBLEPeripheral.h"
 #include "simpleGATTprofile.h"
 #include "hci_tl.h"
+#include "LC_Key.h"
 /*********************************************************************
  * MACROS
  */
@@ -100,8 +101,13 @@ void SimpleBLEPeripheral_Init( uint8 task_id )
     #endif
 	simpleGATTProfile_AddService();					// simple GATT Profile Service
 
+	LC_KeyPowerProcess();
+
     // Setup a delayed profile startup
-    osal_set_event( application_TaskID, SBP_START_DEVICE_EVT );
+	if(LC_Dev_System_Param.dev_power_flag == SYSTEM_WORKING)
+	{
+    	osal_set_event( application_TaskID, SBP_START_DEVICE_EVT );
+	}
 }
 
 /*********************************************************************

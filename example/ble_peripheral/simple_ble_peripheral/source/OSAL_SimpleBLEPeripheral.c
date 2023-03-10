@@ -49,7 +49,7 @@
 /* Application */
 #include "simpleBLEPeripheral.h"
 #include "LC_Uart.h"
-
+#include "LC_Key.h"
 /*********************************************************************
  * GLOBAL VARIABLES
  */
@@ -70,6 +70,7 @@ pTaskEventHandlerFn tasksArr[] =
   GATTServApp_ProcessEvent,                                         // task 7
   SimpleBLEPeripheral_ProcessEvent,									// task 8
   LC_Uart_ProcessEvent,
+  LC_Key_ProcessEvent,
 
 };
 
@@ -128,7 +129,8 @@ void osalInitTasks( void )
 
   /* Application */
   SimpleBLEPeripheral_Init( taskID++ );
-  LC_Uart_Task_Init(taskID);
+  LC_Uart_Task_Init(taskID++);
+  LC_Key_Task_Init(taskID);
 	
 }
 /*********************************************************************

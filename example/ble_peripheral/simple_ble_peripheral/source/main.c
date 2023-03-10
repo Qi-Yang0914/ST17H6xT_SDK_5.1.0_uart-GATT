@@ -249,8 +249,8 @@ int  main(void)
 {     
     //ble memory init and config
     ble_mem_init_config();
-    hal_watchdog_config(WDG_2S);
-    g_system_clk = SYS_CLK_DLL_64M;//SYS_CLK_DBL_32M,SYS_CLK_XTAL_16M;
+    hal_watchdog_config(WDG_4S);
+    g_system_clk = SYS_CLK_XTAL_16M;//SYS_CLK_DBL_32M,SYS_CLK_XTAL_16M;
     g_clk32K_config = CLK_32K_RCOSC;//CLK_32K_XTAL,CLK_32K_RCOSC
 
     drv_irq_init();

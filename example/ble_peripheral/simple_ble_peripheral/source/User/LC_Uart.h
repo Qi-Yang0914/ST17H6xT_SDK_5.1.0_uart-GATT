@@ -25,12 +25,12 @@
 /*------------------------------------------------------------------*/
 /*						Pins definitions							*/
 /*------------------------------------------------------------------*/
-#define     UART_TX_PIN     P15
-#define     UART_RX_PIN     P11
+#define     UART_TX_PIN     P9
+#define     UART_RX_PIN     P10
 /*------------------------------------------------------------------*/
 /*						MACROS										*/
 /*------------------------------------------------------------------*/
-#define     Uart_Baudrate       115200
+#define     Uart_Baudrate       38400//38400
 #define     UART_RX_BUF_SIZE    1024
 #define     UART_TX_BUF_SIZE    512
 

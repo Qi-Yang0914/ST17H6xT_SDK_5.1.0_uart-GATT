@@ -89,7 +89,9 @@ BareMetal: Without RTOS</Description>
     <File Name="../../../../components/driver/source/flash.c">
       <FileOption/>
     </File>
-    <File Name="../../../../components/driver/source/gpio.c"/>
+    <File Name="../../../../components/driver/source/gpio.c">
+      <FileOption/>
+    </File>
   </VirtualDirectory>
   <VirtualDirectory Name="simpleBlePeripheral">
     <File Name="../source/main.c">
@@ -128,7 +130,16 @@ BareMetal: Without RTOS</Description>
     <File Name="../source/User/LC_Uart.c">
       <FileOption/>
     </File>
+    <File Name="../source/User/LC_Key.c">
+      <FileOption/>
+    </File>
   </VirtualDirectory>
+  <ToolsConfig>
+    <Compiler>
+      <Name>CKV2ElfMinilib</Name>
+      <Version>latest</Version>
+    </Compiler>
+  </ToolsConfig>
   <BuildConfigs>
     <BuildConfig Name="BuildSet">
       <Target>
@@ -225,7 +236,7 @@ BareMetal: Without RTOS</Description>
         <Tools/>
       </User>
       <Compiler>
-        <Define>x_PHY_DEBUG SERV_GGS=0 SERV_GATT_SERV=0 SERV_DEV_INFO=0 PHY_MCU_TYPE=MCU_BUMBEE_CK802 MAIN_HAS_NOARGC MAIN_HAS_NORETURN OSAL_CBTIMER_NUM_TASKS=1 HCI_TL_NONE=1 OSALMEM_METRICS=0 DEBUG_INFO=1 CFG_WDT_ENABLE=0 CFG_SLEEP_MODE=PWR_MODE_SLEEP USE_ROMSYM_ALIAS=1  HOST_CONFIG=6</Define>
+        <Define>x_PHY_DEBUG SERV_GGS=0 SERV_GATT_SERV=0 SERV_DEV_INFO=0 PHY_MCU_TYPE=MCU_BUMBEE_CK802 MAIN_HAS_NOARGC MAIN_HAS_NORETURN OSAL_CBTIMER_NUM_TASKS=1 HCI_TL_NONE=1 OSALMEM_METRICS=0 DEBUG_INFO=0 CFG_WDT_ENABLE=0 CFG_SLEEP_MODE=PWR_MODE_SLEEP USE_ROMSYM_ALIAS=1  HOST_CONFIG=6</Define>
         <Undefine/>
         <Optim>Optimize size (-Os)</Optim>
         <DebugLevel>Maximum (-g3)</DebugLevel>
@@ -267,6 +278,7 @@ BareMetal: Without RTOS</Description>
         <StopAt>yes</StopAt>
         <StopAtText>main</StopAtText>
         <InitFile>$(ProjectPath)/utilities/gdb.init</InitFile>
+        <PreInit/>
         <AfterLoadFile/>
         <AutoRun>yes</AutoRun>
         <ResetType>Hard Reset</ResetType>
@@ -324,6 +336,7 @@ BareMetal: Without RTOS</Description>
       </Debug>
       <Flash>
         <InitFile>$(ProjectPath)/utilities/flash.init</InitFile>
+        <PreInit/>
         <Erase>Do Not Erase</Erase>
         <Algorithms Path=""/>
         <Program>no</Program>
@@ -337,10 +350,4 @@ BareMetal: Without RTOS</Description>
       </Flash>
     </BuildConfig>
   </BuildConfigs>
-  <ToolsConfig>
-    <Compiler>
-      <Name>CKV2ElfMinilib</Name>
-      <Version>latest</Version>
-    </Compiler>
-  </ToolsConfig>
 </Project>

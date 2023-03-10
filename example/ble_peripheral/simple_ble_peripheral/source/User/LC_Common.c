@@ -28,7 +28,12 @@ lc_app_set_t		LC_App_Set_Param	=
 	.app_write_len				=	0,
 	.app_notify_len				=	0,
 };
-
+lc_dev_sys_param	LC_Dev_System_Param	=
+{
+	.dev_poweron_switch_flag	=	0,
+	.dev_power_flag				=	SYSTEM_POWEROFF,
+	.dev_ble_con_state			=	LC_DEV_BLE_DISCONNECTION,
+};
 /*------------------------------------------------------------------*/
 /* 					 	local functions			 					*/
 /*------------------------------------------------------------------*/
